@@ -88,6 +88,7 @@
     .botao__3,
     .botao__4,
     .botao__5{
+        cursor: pointer;
         border-radius: 5px;
         margin: 0 2em;
         background-color: var(--botao-laranja);
@@ -104,6 +105,7 @@
         border: 2px solid var(--botao-laranja);
         background-color: transparent;
         color: var(--botao-laranja);
+
     }
 
     .terciario{
