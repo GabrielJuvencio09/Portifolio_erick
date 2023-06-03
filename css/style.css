@@ -168,7 +168,9 @@
 
     @media (max-width: 425px) 
     {
-
+        body{
+            max-width: 100vh;
+        }
        
         .principal{
             flex-direction: column-reverse;
@@ -200,7 +202,7 @@
         }
 
         .secundario{
-            width: 100%;
+            width: auto;
             display: flex;
             flex-direction: column;
         }
@@ -208,8 +210,8 @@
             margin: 2em 0 2em 0;
         }
         .foto__painel{
-            width: 50vh ;
-            height: 30vh;
+            width: 30vh ;
+            height: 20vh;
         }
         .Secundario__botoes{
             margin: 0 0 0 2em;
@@ -224,6 +226,21 @@
         }
         .fotos__portifolio{
             margin: 5em 0;
+        }
+
+        .Foto__representante{
+            width: 30vh ;
+    
+        }
+
+        .foto{
+            width: 30vh ;
+            height: 20vh;
+        }
+    
+
+        footer{
+            max-width: 120%;
         }
 
     }
