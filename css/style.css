@@ -194,6 +194,7 @@
         .secundario__texto__laranja,
         .Terciario__Nome,
         .laranja{
+            width: 125%;
             font-size: 18px;
         }
 
