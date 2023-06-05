@@ -67,22 +67,26 @@
         font-size: 24px;
         width: 80%;
     }
-
+   
     .secundario__texto__laranja{
+        width: 45em;
         margin: 1em 0 0 0;
     color: var(--botao-laranja);
     }
 
     .Secundario__foto{
         
-        margin: 0 0 0 10em;
+        margin: 6em 0 0 5em;
+    }
+    .foto__painel{
+        width: 40em;
     }
 
-   
     .Secundario__botoes{
         text-align: center;
        margin: 3em 0 3em 0;
     }
+
     .botao__1,
     .botao__2,
     .botao__3,
@@ -115,7 +119,15 @@
         margin: 0 5em 0 5em;
     }
 
-    .terciario__titulo{
+    .terciario__titulos{
+        display: flex;
+        justify-content: space-between;
+        gap: 18em;
+    }
+   
+
+    .terciario__titulo,
+    .Portifolio{
         font-weight: 700;
         font-size: 42px;
         color: var(--branco-principal);
@@ -150,9 +162,13 @@
     }
 
     .fotos__portifolio{
+        margin:  5em 0 0 0 ;
         gap: 2em;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        overflow-x: auto;
+        width: 40em;
+        height: 29em;
     }
 
     .Whatsapp__orcamento{
@@ -164,6 +180,36 @@
         background-color: var(--botao-laranja);
         padding: 0.3em;
         text-align: center;
+
+    }
+
+    @media (max-width: 1080px) {
+
+        .secundario__texto{
+            width: 15em;
+            
+        }
+
+        .Secundario__botoes{
+            display: flex;
+            text-align: center;
+           margin: 3em 0 3em 0;
+        }
+
+        .secundario__texto__laranja{
+            width: 40em;
+            margin: 1em 0 0 0;
+        color: var(--botao-laranja);
+        }
+    
+
+        .foto__painel{
+            margin: 10em 0 0 0;
+            width: 30em;
+            height: 20em;
+            
+        }
+
 
     }
 
@@ -213,8 +259,8 @@
             margin: 2em 0 2em 0;
         }
         .foto__painel{
-            width: 30vh ;
-            height: 20vh;
+            width: 50vh ;
+            height: 40vh;
         }
         .Secundario__botoes{
             margin: 0 0 0 2em;
@@ -228,7 +274,12 @@
             flex-direction: column;
         }
         .fotos__portifolio{
-            margin: 5em 0;
+            margin:  5em 0 0 0 ;
+            gap: 2em;
+            display: flex;
+            flex-direction: column;
+            width: auto;
+            height: auto;
         }
 
         .Foto__representante{
