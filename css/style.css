@@ -259,8 +259,9 @@
             margin: 2em 0 2em 0;
         }
         .foto__painel{
-            width: 50vh ;
-            height: 40vh;
+            margin: 0;
+            width: 35vh ;
+            height: 30vh;
         }
         .Secundario__botoes{
             margin: 0 0 0 2em;
