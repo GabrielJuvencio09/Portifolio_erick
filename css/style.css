@@ -185,6 +185,11 @@
 
     @media (max-width: 1080px) {
 
+        .foto__logo{
+            width: 40em ;
+            height: 30em ;
+        }
+
         .secundario__texto{
             width: 15em;
             
