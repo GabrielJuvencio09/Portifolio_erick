@@ -228,6 +228,11 @@
         .principal{
             flex-direction: column-reverse;
         }
+
+        .foto__logo{
+            width: auto;
+            height: auto;
+        }
         
         .princiapl__titulo,
         .secundario__titulo
@@ -279,6 +284,10 @@
             display: flex;
             flex-direction: column;
         }
+        .Portifolio{
+            margin: 2em 0 0 0 ;
+        }
+
         .fotos__portifolio{
             margin:  5em 0 0 0 ;
             gap: 2em;
@@ -304,4 +313,6 @@
         }
 
     }
+
+
 
