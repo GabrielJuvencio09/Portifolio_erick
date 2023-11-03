@@ -1,6 +1,12 @@
-*{
-    margin: 0;
+* {
+    margin: 0 auto;
     padding: 0;
+    
+}
+
+li{
+    text-decoration: none;
+    list-style: none;
 }
 
 :root {
@@ -9,310 +15,382 @@
     --botao-laranja: #FE5919;
     --cor-fundo: #00030C;
     --fonte-principal: 'inter';
-  }
+}
 
 
-  body{
+body {
     background: var(--cor-fundo);
     color: var(--branco-principal);
     font-family: var(--fonte-principal);
-    
-  }
 
-  .laranja{
+}
+
+.Menu {
+    margin: 6rem 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Menu h1{
     color: var(--laranja-secundario);
-  }
-  
-    .borda{
-        border-bottom: 0.2em solid var(--botao-laranja);
-        margin: 2em  3em ;
-    }
+}
 
-    .principal{
-        max-width: 100%;
-        display: flex;
-        flex-direction:row;
-        margin: 0 5em 0 5em;
-    }
+.navegaçao-lista{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
 
-    .princiapl__titulo{
-        font-weight: 700;
-        font-size: 42px;
-        margin: 5em 0 1em 0;
+}
 
-    }
-    .Principal__texto{
-        font-weight: 400;
-        font-size: 24px;
-        width: 80%;
-    }
 
-    .secundario{
-        display: grid;
-        grid-template-columns: 40% 60%;
-        margin: 0 5em 0 5em;
-        
-    }
-  
-    .secundario__titulo{
-        font-weight: 700;
-        font-size: 42px;
-        color: var(--botao-laranja);
-        margin: 0 0 1em 0;
-    }
 
-    .secundario__texto, 
-    .secundario__texto__laranja{
-        font-weight: 400;
-        font-size: 24px;
-        width: 80%;
-    }
-   
-    .secundario__texto__laranja{
-        width: 45em;
-        margin: 1em 0 0 0;
+.navegaçao-lista a{
+    padding: 0.2rem;
+    text-decoration: none;
+    color: var(--branco-principal);
+
+}
+
+.navegaçao-lista a:hover{
+    color: var(--laranja-secundario);
+    border-bottom: 1px solid var(--branco-principal);
+}
+
+
+.offline {
+    display: none;
+}
+
+.js-scroll{
+    opacity: 0;
+    transform: translate3d(-30px , 0 , 0);
+  transition: .3s;
+}
+
+.js-scroll.ativo{
+    opacity: 1;
+    transform: translate3d(-30px , 0 , 0);
+  transition: .10s;
+}
+
+
+.laranja {
+    color: var(--laranja-secundario);
+}
+
+.borda {
+    border-bottom: 0.2em solid var(--botao-laranja);
+    margin: 2em 3em;
+}
+
+.principal {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 5em 0 5em;
+}
+
+.princiapl__titulo {
+    font-weight: 700;
+    font-size: 42px;
+    margin: 5em 0 1em 0;
+
+}
+
+.Principal__texto {
+    font-weight: 400;
+    font-size: 24px;
+    width: 80%;
+}
+
+.secundario {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    margin: 0 5em 0 5em;
+
+}
+
+.secundario__titulo {
+    font-weight: 700;
+    font-size: 42px;
     color: var(--botao-laranja);
-    }
+    margin: 0 0 1em 0;
+}
 
-    .Secundario__foto{
-        
-        margin: 6em 0 0 5em;
-    }
-    .foto__painel{
-        width: 40em;
-    }
+.secundario__texto,
+.secundario__texto__laranja {
+    font-weight: 400;
+    font-size: 24px;
+    width: 80%;
+    animation: show .8s forwards;
+}
 
-    .Secundario__botoes{
-        text-align: center;
-       margin: 3em 0 3em 0;
-    }
+.secundario__texto__laranja {
+    width: 45em;
+    margin: 1em 0 0 0;
+    color: var(--botao-laranja);
+}
 
-    .botao__1,
-    .botao__2,
-    .botao__3,
-    .botao__4,
-    .botao__5{
-        cursor: pointer;
-        border-radius: 5px;
-        margin: 0 2em;
-        background-color: var(--botao-laranja);
-        padding: 1em;
-        color: var(--branco-principal);
-        text-decoration: none;
-    }
+.Secundario__foto {
 
-    .botao__1:hover,
-    .botao__2:hover,
-    .botao__3:hover,
-    .botao__4:hover,
-    .botao__5:hover{
-        border: 2px solid var(--botao-laranja);
-        background-color: transparent;
-        color: var(--botao-laranja);
+    margin: 6em 0 0 5em;
+}
 
-    }
+.foto__painel {
+    width: 40em;
+}
 
-    .terciario{
-        display: grid;
-        grid-template-columns: 50% 50%;
-        margin: 5em 0 5em 0;
-        margin: 0 5em 0 5em;
-    }
+.Secundario__botoes {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 3em 0 3em 0;
+}
 
-    .terciario__titulos{
-        display: flex;
-        justify-content: space-between;
-        gap: 18em;
-    }
+.botao__1,
+.botao__2,
+.botao__3,
+.botao__4,
+.botao__5 {
    
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 2em;
+    background-color: var(--botao-laranja);
+    padding: 1em;
+    color: var(--branco-principal);
+    text-decoration: none;
+    border: 2px solid transparent
+}
 
-    .terciario__titulo,
-    .Portifolio{
-        font-weight: 700;
-        font-size: 42px;
-        color: var(--branco-principal);
-        margin: 0 0 1em 0;
-    }
-    .Foto__representante{
-     border-radius: 500px;
+.botao__1:hover,
+.botao__2:hover,
+.botao__3:hover,
+.botao__4:hover,
+.botao__5:hover {
+    border: 2px solid var(--botao-laranja);
+    background-color: transparent;
+    color: var(--botao-laranja);
+
+}
+
+.terciario {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 5em 0 5em 0;
+    margin: 0 5em 0 5em;
+}
+
+.terciario__titulos {
+    display: flex;
+    justify-content: space-between;
+    gap: 18em;
+}
+
+
+.terciario__titulo,
+.Portifolio {
+    font-weight: 700;
+    font-size: 42px;
+    color: var(--branco-principal);
+    margin: 0 0 1em 0;
+}
+
+.Foto__representante {
+    border-radius: 500px;
+}
+
+.Foto__representante:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 8px var(--botao-laranja);
+}
+
+.Terciario__Nome {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 2em 0;
+}
+
+.Terciario__contato {
+    cursor: pointer;
+    margin: 0 0 3em 0;
+}
+
+.Contato {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.fotos__portifolio {
+    margin: 5em 0 0 0;
+    gap: 2em;
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+    width: 40em;
+    height: 29em;
+}
+
+.Whatsapp__orcamento {
+    margin: 0 0 2em 1em;
+}
+
+footer {
+    margin: 20em 0 0em 0;
+    background-color: var(--botao-laranja);
+    padding: 0.3em;
+    text-align: center;
+
+}
+
+@media (max-width: 1080px) {
+
+    .foto__logo {
+        width: 40em;
+        height: 30em;
     }
 
-    .Foto__representante:hover{
-        cursor: pointer;
-        box-shadow: 0px 0px 8px var(--botao-laranja);
+    .secundario__texto {
+        width: 15em;
+
     }
 
-    .Terciario__Nome{
-        font-size: 32px;
-        font-weight: 700;
-        margin:0 0 2em 0;
+    .Secundario__botoes {
+        display: flex;
+        text-align: center;
+        margin: 3em 0 3em 0;
     }
 
-    .Terciario__contato{
-        cursor: pointer;
-        margin: 0 0 3em 0;
+    .secundario__texto__laranja {
+        width: 40em;
+        margin: 1em 0 0 0;
+        color: var(--botao-laranja);
     }
-    .Contato{
-        list-style: none;
+
+
+    .foto__painel {
+        margin: 10em 0 0 0;
+        width: 30em;
+        height: 20em;
+
+    }
+
+
+}
+
+
+@media (max-width: 425px) {
+    body {
+        max-width: 100vh;
+    }
+
+    .principal {
+        flex-direction: column-reverse;
+    }
+
+    .foto__logo {
+        width: auto;
+        height: auto;
+    }
+
+    .princiapl__titulo,
+    .secundario__titulo {
+        font-size: 24px;
+        margin: 0;
+    }
+
+    .Principal__texto {
+        margin: 2em 0 0 0;
+    }
+
+    .Principal__texto,
+    .secundario__texto,
+    .secundario__texto__laranja,
+    .Terciario__Nome,
+    .laranja {
+        width: 125%;
+        font-size: 18px;
+    }
+
+    .Whatsapp__orcamento,
+    .Terciario__contato {
+        font-size: 12px;
+    }
+
+    .secundario {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Secundario__foto {
+        margin: 2em 0 2em 0;
+    }
+
+    .foto__painel {
+        margin: 0;
+        width: 35vh;
+        height: 30vh;
+    }
+
+    .Secundario__botoes {
+        margin: 0 0 0 2em;
         display: flex;
         flex-direction: column;
         gap: 1em;
-        font-size: 20px;
-        font-weight: 400;
     }
 
-    .fotos__portifolio{
-        margin:  5em 0 0 0 ;
+    .terciario {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Portifolio {
+        margin: 2em 0 0 0;
+    }
+
+    .fotos__portifolio {
+        margin: 5em 0 0 0;
         gap: 2em;
         display: flex;
         flex-direction: column;
-        overflow-x: auto;
-        width: 40em;
-        height: 29em;
+        width: auto;
+        height: auto;
     }
 
-    .Whatsapp__orcamento{
-        margin: 0 0 2em 1em;
-    }
-
-    footer{
-        margin: 20em 0 0em 0;
-        background-color: var(--botao-laranja);
-        padding: 0.3em;
-        text-align: center;
+    .Foto__representante {
+        width: 30vh;
 
     }
 
-    @media (max-width: 1080px) {
-
-        .foto__logo{
-            width: 40em ;
-            height: 30em ;
-        }
-
-        .secundario__texto{
-            width: 15em;
-            
-        }
-
-        .Secundario__botoes{
-            display: flex;
-            text-align: center;
-           margin: 3em 0 3em 0;
-        }
-
-        .secundario__texto__laranja{
-            width: 40em;
-            margin: 1em 0 0 0;
-        color: var(--botao-laranja);
-        }
-    
-
-        .foto__painel{
-            margin: 10em 0 0 0;
-            width: 30em;
-            height: 20em;
-            
-        }
-
-
+    .foto {
+        width: 30vh;
+        height: 20vh;
     }
 
 
-    @media (max-width: 425px) 
-    {
-        body{
-            max-width: 100vh;
-        }
-       
-        .principal{
-            flex-direction: column-reverse;
-        }
-
-        .foto__logo{
-            width: auto;
-            height: auto;
-        }
-        
-        .princiapl__titulo,
-        .secundario__titulo
-                {
-            font-size: 24px;
-         margin: 0 ;
-        }
-
-        .Principal__texto{
-            margin: 2em 0 0 0;
-        }
-
-        .Principal__texto,
-        .secundario__texto,
-        .secundario__texto__laranja,
-        .Terciario__Nome,
-        .laranja{
-            width: 125%;
-            font-size: 18px;
-        }
-
-        .Whatsapp__orcamento,
-        .Terciario__contato
-        {
-            font-size: 12px;
-        }
-
-        .secundario{
-            width: auto;
-            display: flex;
-            flex-direction: column;
-        }
-        .Secundario__foto{
-            margin: 2em 0 2em 0;
-        }
-        .foto__painel{
-            margin: 0;
-            width: 35vh ;
-            height: 30vh;
-        }
-        .Secundario__botoes{
-            margin: 0 0 0 2em;
-            display: flex;
-            flex-direction: column;
-            gap: 1em;
-        }
-
-        .terciario{
-            display: flex;
-            flex-direction: column;
-        }
-        .Portifolio{
-            margin: 2em 0 0 0 ;
-        }
-
-        .fotos__portifolio{
-            margin:  5em 0 0 0 ;
-            gap: 2em;
-            display: flex;
-            flex-direction: column;
-            width: auto;
-            height: auto;
-        }
-
-        .Foto__representante{
-            width: 30vh ;
-    
-        }
-
-        .foto{
-            width: 30vh ;
-            height: 20vh;
-        }
-    
-
-        footer{
-            max-width: 120%;
-        }
-
+    footer {
+        max-width: 120%;
     }
 
+}
 
 
+
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: translate3d(-30px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
